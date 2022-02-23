@@ -14,6 +14,7 @@ describe("polybius", ()=>{
     const expected = "i/j";
     expect(actual).to.equal(expected);
   });
+  
   it("should ignore capital letters", ()=>{
     const actual = polybius("Hello");
     const expected = polybius("hello");
