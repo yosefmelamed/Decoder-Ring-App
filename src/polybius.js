@@ -24,14 +24,14 @@ const answer = [];
 inputArray.forEach((input, index) => keys.forEach((code,i) =>{
    if(input !== "i" && input !== "j" && input === code){answer.push(keys[i +1])}
    return answer; })    
-)
+);
 
 /*loop again through the input arrays and use .splice to insert spaces where they were originally in the array based on a space/' ' match;
 note that the "space" match is based on single quotes/' '  since that is how the "space" is returned by the Array.from function we used ealier*/
 
 inputArray.forEach((input, index) => {
     if(input === ' '){answer.splice(index, 0,' ')} return answer; 
-})
+});
 
 //finally loop through the input array one more time to insert the nuber 42 for a match of either "i" or "j"
 
@@ -57,7 +57,7 @@ employing Number inside of the callback to simutaniously seperate each charachte
 
 let inputArray = String(input).split("").map((input)=>{
         return Number(input);
-      })     
+      });     
 
 /*loop through the input and push an "0" character in the next index after any zero, which indicates a space, so as not to throw off the conversion because of the space*/      
 
@@ -65,7 +65,7 @@ inputArray.forEach((array, index) =>{
     if(array === 0){
         inputArray.splice(index +1, 0, "0");
     }
-})
+});
 
 
 /*check that the final input arra length is an even number to ensure there every number has a pair, otherewise return false*/
