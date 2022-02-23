@@ -15,32 +15,32 @@ describe("caesar", () =>{
     const actual = caesar("Altogether", 2);
     const expected = caesar("altogether", 2);
     expect(actual).to.equal(expected);
-  }) 
+  }); 
   
   it("should wrap around the alphabet if a shift goes past  'z'", ()=>{
     const actual = caesar("z", 3);
     const expected = "c";
     expect(actual).to.equal(expected);
-  })
+  });
   
   it("should wrap around the alphabet if a shift goes backwards past  'a'", ()=>{
     const actual = caesar("a", -3);
     const expected = "x";
     expect(actual).to.equal(expected);
-  })
+  });
   
   it("should maintain spaces and speacial characters when encoding", ()=>{
     const actual = caesar("you are great!!", 3);
     const expected = "brx duh juhdw!!";
     expect(actual).to.equal(expected);      
-    })   
+    });   
   
   it("should maintain spaces and speacial characters when decoding", ()=>{
     const actual = caesar("brx duh juhdw!!", 3, false);
     const expected = "you are great!!";
     expect (actual).to.equal(expected);
-  })
-  })
+  });
+  });
   
 
 
